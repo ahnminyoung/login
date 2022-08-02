@@ -55,7 +55,20 @@ public class LoginController {
         return "redirect:/";
     }
 
+    @GetMapping("/asdf")
+    public void asdf(){
+        int num =0;
+
+
+        for (int i = 1; i <= 6; i++) {
+            log.info("임의의 값 ={}", (int)(Math.random()*45+1));
+        }
+
+
+    }
+
     private void expireCookie(HttpServletResponse response, String cookieName) {
+
         Cookie cookie = new Cookie(cookieName, null);
         cookie.setMaxAge(0);
         response.addCookie(cookie);

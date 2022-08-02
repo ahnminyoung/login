@@ -17,7 +17,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class SessionManager {
 
     //상수로 만드는 단축키 ctrl + alt+ c
-    public static final String SESSION_COOKIE_NAME = "mySeesionId";
+    public static final String SESSION_COOKIE_NAME = "mySessionId";
     // 동시에 요청이 올때는 ConcurrentHashMap을 써야함함
     // 동시성이슈가 있을때나, 동시에 여러 쓰레드가 여기에 접근하는데 그럴땐 ConcurrentHashMap써야함
    private Map<String, Object> sessionStore = new ConcurrentHashMap<>();
